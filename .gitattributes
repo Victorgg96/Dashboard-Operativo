@@ -1,0 +1,21 @@
+# Normaliza los finales de línea: evita el aviso
+# "LF will be replaced by CRLF the next time Git touches it".
+# En el repo todo se guarda con LF; en tu Windows sigues editando con CRLF.
+* text=auto
+
+# Estos siempre con LF, aunque estés en Windows
+*.py    text eol=lf
+*.js    text eol=lf
+*.css   text eol=lf
+*.md    text eol=lf
+*.csv   text eol=lf
+*.txt   text eol=lf
+
+# Los .bat necesitan CRLF para que cmd.exe los ejecute bien
+*.bat   text eol=crlf
+
+# Binarios: que Git no los toque
+*.png   binary
+*.jpg   binary
+*.docx  binary
+*.pdf   binary
