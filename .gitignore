@@ -1,3 +1,90 @@
+# ---------------------------------------------------------------------------
+# Entornos virtuales  ← lo más importante
+# .venv son ~2 000 archivos, pesa cientos de MB y contiene pyvenv.cfg con la
+# ruta absoluta de tu máquina (C:\Users\<tu usuario>\...). Nunca va al repo:
+# quien clone el proyecto lo recrea con requirements.txt.
+# ---------------------------------------------------------------------------
 .venv/
+venv/
+env/
+ENV/
+.python-version
+pip-wheel-metadata/
+
+# ---------------------------------------------------------------------------
+# Bytecode y caché de Python
+# ---------------------------------------------------------------------------
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Secretos y configuración local  (hoy el proyecto no tiene, pero si más
+# adelante agregas una conexión a base de datos o una API key, va aquí)
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.local
+secrets.json
+credentials.json
+config.local.py
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Node (solo se usa para generar el reporte .docx)
+# ---------------------------------------------------------------------------
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Editores e IDEs
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------------------
+# Basura de Windows / macOS / OneDrive
+# El proyecto vive dentro de OneDrive: estos archivos aparecen solos.
+# ---------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# ---------------------------------------------------------------------------
+# Archivos temporales de Office
+# Word deja un ~$Reporte....docx mientras el documento está abierto.
+# ---------------------------------------------------------------------------
+~$*
+*.tmp
+*.bak
+
+# ---------------------------------------------------------------------------
+# Salidas intermedias del reporte (el .docx sí se versiona; el PDF y los JPG
+# que genera la conversión, no)
+# ---------------------------------------------------------------------------
+reporte/*.pdf
+reporte/pag-*.jpg
+
+# ---------------------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------------------
+*.log
+logs/
