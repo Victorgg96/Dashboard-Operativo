@@ -156,20 +156,6 @@ dashboard_datos/
 
 ---
 
-## Regenerar capturas y reporte
-
-Con la app corriendo en otra terminal:
-
-```bash
-pip install playwright && playwright install chromium
-python scripts/capturas.py     # → screenshots/
-
-npm install docx
-node scripts/reporte.js        # → reporte/Reporte_Dashboard_Operativo.docx
-```
-
----
-
 ## Créditos
 
 Práctica académica de la materia **Visualización de Datos**: diseño e
